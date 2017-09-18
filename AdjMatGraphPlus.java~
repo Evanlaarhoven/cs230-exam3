@@ -1,0 +1,85 @@
+import java.io.FileNotFoundException;
+import java.util.LinkedList;
+
+/**
+ * An extended Adjacency Matrix graph implementation.  Complete this template for the exam.
+ */
+public class AdjMatGraphPlus<T> extends AdjMatGraph<T> implements GraphPlus<T> {
+ 
+ /** DO NOT MODIFY THE FIRST THREE METHODS **************************
+  * The methods you will implement follow below.
+  */
+
+ /**
+  * Construct an empty graph.
+  */
+ public AdjMatGraphPlus() {
+  super();
+ }
+ 
+ /**
+  * Construct a graph with the same vertices and edges as the given original.
+  * @param original
+  */
+ public AdjMatGraphPlus(AdjMatGraph<T> original) {
+  super(original);
+ }
+ 
+ /**
+  * Read a TGF file and create an AdjMatGraphPlus<String> from it.
+  * @param tgfFile - the TGF file to read
+  * @return a graph created from the TGF file
+  * @throws FileNotFoundException if TGF file is not found.
+  */
+ public static AdjMatGraphPlus<String> fromTGF(String tgfFile) throws FileNotFoundException {
+  AdjMatGraphPlus<String> g = new AdjMatGraphPlus<String>();
+  AdjMatGraph.loadTGF(tgfFile, g);
+  return g;
+ }
+ 
+
+ 
+ /**** IMPLEMENT THE METHODS BELOW *********************************
+  * Replace "throw new UnsupportedOperationException();" with
+  * a working implementation.
+  ******************************************************************/
+ 
+
+ 
+ public GraphPlus<T> clone() {
+  throw new UnsupportedOperationException();
+ }
+
+ public boolean isSink(T vertex) {
+  throw new UnsupportedOperationException();
+ }
+
+ public LinkedList<T> allSinks() {
+  throw new UnsupportedOperationException();
+ }
+
+ public boolean isSource(T vertex) {
+  throw new UnsupportedOperationException();
+ }
+
+ public LinkedList<T> allSources() {
+  throw new UnsupportedOperationException();
+ }
+
+ public boolean isIsolated(T vertex) {
+  throw new UnsupportedOperationException();
+ }
+
+ public LinkedList<T> listByPriority() throws GraphCycleException {
+  throw new UnsupportedOperationException();
+ }
+
+ public LinkedList<T> dfsTraversal(T startVertex) {
+  throw new UnsupportedOperationException();
+ }
+
+ public LinkedList<T> bfsTraversal(T startVertex) {
+  throw new UnsupportedOperationException();
+ }
+
+}
